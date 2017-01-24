@@ -1,0 +1,9 @@
+%h2= "Welcome #{@current_teacher.name} to your class"
+
+.student-progress
+  - @students.each do |student|
+    %ul.students-list
+      %li
+        %h3= student.username
+        %label= "Student #{student.username} current progress is"
+        %p= "Lesson: #{student.progress.lesson.number} Part: #{student.progress.part.number}"
