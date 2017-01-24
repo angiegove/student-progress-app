@@ -5,7 +5,7 @@ describe StudentsController do
   describe '#show' do
     context 'student is found ' do
       it "finds student by username" do
-        student = Student.create!
+        student = Student.create
         get :show, params: {id: student.id}
         parsed_response = JSON.parse(response.body)
         expect(response.body).to eq(student.to_json)
