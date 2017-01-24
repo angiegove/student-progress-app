@@ -1,6 +1,5 @@
 class Progress < ApplicationRecord
   self.table_name = 'progress'
-  belongs_to :student
-  has_one :lesson
-  has_one :part
+  belongs_to :lesson
+  belongs_to :part
 end
