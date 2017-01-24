@@ -1,7 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+julie = Student.create(username: "Jruby", name: 'Julie', surname: 'Ruby')
+tooty = Student.create(username: "tootyfruity", name: 'Tony', surname: 'Bob')
+boshd = Student.create(username: "boshd", name: 'diego', surname: 'bosh')
+
+lesson1 = Lesson.create(number:1, description: 'first lesson', content: 'all the learnings')
+Part.create(number:1, description: 'Part one of first lesson', content: 'all the learnings', lesson_id: lesson1.id)
+Part.create(number:2, description: 'Part two of first lesson', content: 'all the learnings', lesson_id: lesson1.id)
+Part.create(number:3, description: 'Part three of first lesson', content: 'all the learnings', lesson_id: lesson1.id)
+
+lesson23 = Lesson.create(number:23, description: '23rd lesson', content: 'all the learnings')
+Part.create(number:1, description: 'Part one of 23rd lesson', content: 'all the learnings', lesson_id: lesson23.id)
+part233 = Part.create(number:2, description: 'Part two of 23rd lesson', content: 'all the learnings', lesson_id: lesson23.id)
+Part.create(number:3, description: 'Part three of 23rd lesson', content: 'all the learnings', lesson_id: lesson23.id)
+
+lesson56 = Lesson.create(number:56, description: '56th lesson', content: 'all the learnings')
+Part.create(number:1, description: 'Part one of 56th lesson', content: 'all the learnings', lesson_id: lesson56.id)
+part562= Part.create(number:2, description: 'Part two of 56th lesson', content: 'all the learnings', lesson_id: lesson56.id)
+Part.create(number:3, description: 'Part three of 56th lesson', content: 'all the learnings', lesson_id: lesson56.id)
+
+lesson100 = Lesson.create(number:100, description: 'final lesson', content: 'all the learnings')
+part1001 = Part.create(number:1, description: 'Part one of final lesson', content: 'all the learnings', lesson_id: lesson100.id)
+Part.create(number:2, description: 'Part two of final lesson', content: 'all the learnings', lesson_id: lesson100.id)
+Part.create(number:3, description: 'Part three of final lesson', content: 'all the learnings', lesson_id: lesson100.id)
+
+
+Progress.create(lesson_id:lesson100.id, part_id: part1001.id, student_id: tooty.id)
+Progress.create(lesson_id:lesson56.id, part_id:part562.id, student_id: julie.id)
+Progress.create(lesson_id:lesson23.id, part_id:part233.id, student_id: boshd.id)
