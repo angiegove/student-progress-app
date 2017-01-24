@@ -1,0 +1,3 @@
+= simple_form_for @progress.lesson do |f|
+  .form
+    = f.input :lesson_number, placeholder: 'First name', label: false, input_html: { class: 'form-control', data: { parsley_required: true }}

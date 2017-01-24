@@ -38,13 +38,19 @@ Migrate and seed the database     `rake db:migrate`
 To run the server
 `rails s`
 
-Run rake routes to see the routes available to you.  
-`rake routes`
+#### Routes
+##### Students
+
+http://localhost:3000/students/1/progress - will show you json output of student progress
+http://localhost:3000/students/1 - Student info
+
+##### Teachers
+http://localhost:3000/teachers/2/reports - will show you teachers students and their progress
 
 #### Enhancements
 Due to time restrictions (Only had one rather interrupted evening to complete this challenge) there are numerous enhancements and refactors:
 
-- As it stands I am yet to complete Part 3, this is a dissapointment as I was hoping to have all three main parts met.
+- As it stands I am yet to complete Part 3, this is a dissapointment as I was hoping to have all three main parts met. You will find Pseudocode in the progress model to map where I got in my thinking. This code does not actaully work and would require more time to get working.
 
 - Basic CRUD actions, I would like to add a simple for for adding students, lessons, parts etc.
 

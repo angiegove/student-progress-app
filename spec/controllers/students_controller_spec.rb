@@ -25,7 +25,6 @@ describe StudentsController do
 
         expect(response.body).to include({student:"bottle",lesson:1,part:2}.to_json)
 
-
       end
     end
 

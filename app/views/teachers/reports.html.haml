@@ -7,3 +7,4 @@
         %h3= student.username
         %label= "Student #{student.username} current progress is"
         %p= "Lesson: #{student.progress.lesson.number} Part: #{student.progress.part.number}"
+        = link_to "Update #{student.username} and thier progress", update_student_progress_path(id: student.id)
