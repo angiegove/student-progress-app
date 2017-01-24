@@ -6,11 +6,9 @@ class StudentsController < ApplicationController
 
   def progress
     @student = Student.find(params[:id])
-    @part = Part.find(@student.progress.lesson_id)
-    @lesson = Lesson.find(@student.progress.lesson_id)
     render json: { student: @student.username,
-                   lesson: @lesson.number,
-                   part: @part.number
+                   lesson: @student.progress.lesson.number,
+                   part: @student.progress.part.number
                  }
   end
 end
